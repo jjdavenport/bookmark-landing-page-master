@@ -5,6 +5,9 @@ function buttons() {
   const contactInput = document.getElementById("contactInput");
   const contactBtn = document.getElementById("contactBtn");
   const faq = document.querySelectorAll(".faq");
+  const simpleBtn = document.getElementById("simpleBtn");
+  const speedyBtn = document.getElementById("speedyBtn");
+  const easyBtn = document.getElementById("easyBtn");
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("flex");
     document.body.style.overflow = "hidden";
@@ -41,30 +44,45 @@ function buttons() {
       answer.classList.toggle("hidden");
     });
   });
+  simpleBtn.addEventListener("click", () => {
+    updateFeature(features[0]);
+  });
+  speedyBtn.addEventListener("click", () => {
+    updateFeature(features[1]);
+  });
+  easyBtn.addEventListener("click", () => {
+    updateFeature(features[2]);
+  });
 }
+
+const updateFeature = (feature) => {
+  const featureTitle = document.getElementById("title");
+  const featureParagraph = document.getElementById("paragraph");
+  featureTitle.textContent = feature.title;
+  featureParagraph.textContent = feature.paragraph;
+};
 
 buttons();
 
 const features = [
   {
     button: "Simple Bookmarking",
-    info: "More Info",
     title: "Features",
     paragraph:
       "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.",
   },
   {
     button: "Speedy Searching",
-    info: "More Info",
     title: "Intelligent search",
     paragraph:
       "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
   },
   {
     button: "Easy Sharing",
-    info: "More Info",
     title: "Share your bookmarks",
     paragraph:
       "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
   },
 ];
+
+updateFeature(features[0]);
