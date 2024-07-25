@@ -1,3 +1,21 @@
+const features = [
+  {
+    title: "Features",
+    paragraph:
+      "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.",
+  },
+  {
+    title: "Intelligent search",
+    paragraph:
+      "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
+  },
+  {
+    title: "Share your bookmarks",
+    paragraph:
+      "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+  },
+];
+
 function buttons() {
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
@@ -5,9 +23,7 @@ function buttons() {
   const contactInput = document.getElementById("contactInput");
   const contactBtn = document.getElementById("contactBtn");
   const faq = document.querySelectorAll(".faq");
-  const simpleBtn = document.getElementById("simpleBtn");
-  const speedyBtn = document.getElementById("speedyBtn");
-  const easyBtn = document.getElementById("easyBtn");
+  const tabBtn = document.querySelectorAll(".btn");
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("flex");
     document.body.style.overflow = "hidden";
@@ -22,15 +38,9 @@ function buttons() {
     const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
-      contactInput.style.backgroundImage = "url('./images/icon-error.svg')";
-      contactInput.style.backgroundRepeat = "no-repeat";
-      contactInput.style.backgroundPosition = "right 5% center";
     } else if (!regex.test(input)) {
       console.log("invalid");
       error.innerText = "Whoops, make sure it's an email";
-      contactInput.style.backgroundImage = "url('./images/icon-error.svg')";
-      contactInput.style.backgroundRepeat = "no-repeat";
-      contactInput.style.backgroundPosition = "right 5% center";
     } else {
       error.innerText = "";
       contactInput.value = "";
@@ -44,14 +54,16 @@ function buttons() {
       answer.classList.toggle("hidden");
     });
   });
-  simpleBtn.addEventListener("click", () => {
-    updateFeature(features[0]);
-  });
-  speedyBtn.addEventListener("click", () => {
-    updateFeature(features[1]);
-  });
-  easyBtn.addEventListener("click", () => {
-    updateFeature(features[2]);
+  updateFeature(features[0]);
+  tabBtn[0].classList.add("border-b-4", "border-softRed");
+  tabBtn.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      tabBtn.forEach((button) =>
+        button.classList.remove("border-b-4", "border-softRed")
+      );
+      btn.classList.add("border-b-4", "border-softRed");
+      updateFeature(features[i]);
+    });
   });
 }
 
@@ -63,26 +75,3 @@ const updateFeature = (feature) => {
 };
 
 buttons();
-
-const features = [
-  {
-    button: "Simple Bookmarking",
-    title: "Features",
-    paragraph:
-      "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.",
-  },
-  {
-    button: "Speedy Searching",
-    title: "Intelligent search",
-    paragraph:
-      "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-  },
-  {
-    button: "Easy Sharing",
-    title: "Share your bookmarks",
-    paragraph:
-      "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-  },
-];
-
-updateFeature(features[0]);

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "dev": "tailwindcss -i ./src/index.css -o ./src/app.css --watch"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

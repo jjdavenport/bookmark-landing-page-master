@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./src/app.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./src/assets/images/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | Bookmark landing page</title>
-    <link rel="stylesheet" href="./output.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="./src/app.css" />
+    <script src="./src/main.js" defer></script>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -30,9 +30,9 @@
   <body class="font-custom text-lg">
     <main class="flex flex-col gap-4">
       <nav class="flex justify-between w-full relative p-8">
-        <img src="./images/logo-bookmark.svg" alt="" />
+        <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
-          <img src="./images/icon-hamburger.svg" alt="" />
+          <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
         <dialog
           id="menu"
@@ -58,7 +58,7 @@
                 </g>
               </svg>
               <button id="menuCloseBtn">
-                <img src="./images/icon-close.svg" alt="" />
+                <img src="./src/assets/images/icon-close.svg" alt="" />
               </button>
             </div>
             <ul>
@@ -69,13 +69,13 @@
             <button>Login</button>
           </div>
           <div class="flex gap-4 justify-center">
-            <img src="./images/icon-facebook.svg" alt="" />
-            <img src="./images/icon-twitter.svg" alt="" />
+            <img src="./src/assets/images//icon-facebook.svg" alt="" />
+            <img src="./src/assets/images/icon-twitter.svg" alt="" />
           </div>
         </dialog>
       </nav>
       <article class="flex flex-col text-center gap-4 p-8">
-        <img src="./images/illustration-hero.svg" alt="" />
+        <img src="./src/assets/images/illustration-hero.svg" alt="" />
         <h1 class="font-bold text-2xl">A Simple Bookmark Manager</h1>
         <p>
           A clean and simple interface to organize your favourite websites. Open
@@ -95,18 +95,18 @@
         <p id="paragraph">${paragraph}</p>
         <ul>
           <li class="border-t-2 border-solid border-b-2">
-            <button id="simpleBtn" class="p-4">Simple Bookmarking</button>
+            <button id="simpleBtn" class="btn p-4">Simple Bookmarking</button>
           </li>
           <li class="border-solid border-b-2">
-            <button id="speedyBtn" class="p-4">Speedy Searching</button>
+            <button id="speedyBtn" class="btn p-4">Speedy Searching</button>
           </li>
           <li class="border-solid border-b-2">
-            <button id="easyBtn" class="p-4">Easy Sharing</button>
+            <button id="easyBtn" class="btn p-4">Easy Sharing</button>
           </li>
         </ul>
       </article>
       <article class="flex flex-col p-8 text-center gap-4">
-        <img src="./images/illustration-features-tab-1.svg" alt="" />
+        <img src="./src/assets/images/illustration-features-tab-1.svg" alt="" />
         <h3 class="font-bold text-2xl">Bookmark in one click</h3>
         <p>
           Organize your bookmarks however you like. Our simple drag-and-drop
@@ -122,18 +122,26 @@
         </p>
         <ul class="flex flex-col gap-4">
           <li class="flex flex-col items-center">
-            <img class="w-12" src="./images/logo-chrome.svg" alt="" />
+            <img
+              class="w-12"
+              src="./src/assets/images/logo-chrome.svg"
+              alt=""
+            />
             <span>Add to Chrome</span>
             <span>Minimum version 62</span>
             <button class="bg-softBlue">Add & Install Extension</button>
           </li>
           <li class="flex flex-col items-center">
-            <img class="w-12" src="./images/logo-firefox.svg" alt="" />
+            <img
+              class="w-12"
+              src="./src/assets/images/logo-firefox.svg"
+              alt=""
+            />
             <span>Add to Firefox</span><span>Minimum version 55</span>
             <button class="bg-softBlue">Add & Install Extension</button>
           </li>
           <li class="flex flex-col items-center">
-            <img class="w-12" src="./images/logo-opera.svg" alt="" />
+            <img class="w-12" src="./src/assets/images/logo-opera.svg" alt="" />
             <span>Add to Opera</span>
             <span>Minimum version 46</span>
             <button class="bg-softBlue">Add & Install Extension</button>
@@ -153,7 +161,11 @@
             <!-- Question 1 -->
             <button class="question flex w-full justify-between">
               <span class="text-start">What is Bookmark?</span>
-              <img class="w-8" src="./images/icon-arrow.svg" alt="" />
+              <img
+                class="w-8"
+                src="./src/assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
             <!-- Answer 1 -->
             <p class="answer hidden">
@@ -164,9 +176,13 @@
           </li>
           <!-- Question 2 -->
           <li class="faq">
-            <button class="question flex w-full justify-between">
+            <button class="question flex w-full justify-between text-start">
               <span> How can I request a new browser?</span>
-              <img class="w-8" src="./images/icon-arrow.svg" alt="" />
+              <img
+                class="w-8"
+                src="./src/assets/images//icon-arrow.svg"
+                alt=""
+              />
             </button>
             <!-- Answer 2 -->
             <p class="answer hidden">
@@ -180,9 +196,13 @@
           </li>
           <!-- Question 3 -->
           <li class="faq">
-            <button class="question flex w-full justify-between">
+            <button class="question flex w-full justify-between text-start">
               <span> Is there a mobile app?</span>
-              <img class="w-8" src="./images/icon-arrow.svg" alt="" />
+              <img
+                class="w-8"
+                src="./src/assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
             <!-- Answer 3 -->
             <p class="answer hidden">
@@ -194,9 +214,13 @@
           </li>
           <!-- Question 4 -->
           <li class="faq">
-            <button class="question flex justify-between w-full">
+            <button class="question flex justify-between w-full text-start">
               <span> What about other Chromium browsers? </span>
-              <img class="w-8" src="./images/icon-arrow.svg" alt="" />
+              <img
+                class="w-8"
+                src="./src/assets/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
             <!-- Answer 4 -->
             <p class="answer hidden">
@@ -246,13 +270,13 @@
             </g>
           </svg>
           <ul class="flex flex-col gap-4">
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Contact</li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
           <div class="flex gap-8 justify-center">
-            <img src="./images/icon-facebook.svg" alt="" />
-            <img src="./images/icon-twitter.svg" alt="" />
+            <img src="./src/assets/images/icon-facebook.svg" alt="" />
+            <img src="./src/assets/images/icon-twitter.svg" alt="" />
           </div>
         </article>
       </section>

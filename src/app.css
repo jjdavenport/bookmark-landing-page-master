@@ -640,12 +640,21 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-b-4{
+  border-bottom-width: 4px;
+}
+
 .border-t-2{
   border-top-width: 2px;
 }
 
 .border-solid{
   border-style: solid;
+}
+
+.border-softRed{
+  --tw-border-opacity: 1;
+  border-color: hsl(0 94% 66% / var(--tw-border-opacity));
 }
 
 .bg-softBlue{
@@ -723,16 +732,4 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 768px){
-  .md\:hidden{
-    display: none;
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:hidden{
-    display: none;
-  }
 }
