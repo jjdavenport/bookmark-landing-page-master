@@ -17,6 +17,7 @@ const features = [
 ];
 
 function buttons() {
+  const inputDiv = document.getElementById("inputDiv");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
@@ -38,20 +39,30 @@ function buttons() {
     const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
+      inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
+      error.classList.add("p-1");
     } else if (!regex.test(input)) {
       console.log("invalid");
       error.innerText = "Whoops, make sure it's an email";
+      error.classList.add("p-1");
+      inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
     } else {
       error.innerText = "";
       contactInput.value = "";
-      contactInput.style.backgroundImage = "";
+      error.classList.remove("p-1");
+      inputDiv.classList.remove("outline", "outline-softRed", "bg-softRed");
     }
   });
   faq.forEach((faq) => {
+    const path = faq.querySelector(".inactive-path");
+    const svg = faq.querySelector(".inactive");
     const question = faq.querySelector(".question");
     const answer = faq.querySelector(".answer");
     question.addEventListener("click", () => {
       answer.classList.toggle("hidden");
+      path.classList.toggle("stroke-softRed");
+      svg.classList.toggle("transform");
+      svg.classList.toggle("rotate-180");
     });
   });
   updateFeature(features[0]);
