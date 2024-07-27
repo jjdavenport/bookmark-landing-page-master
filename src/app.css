@@ -585,14 +585,6 @@ video {
   height: 100vh;
 }
 
-.w-12{
-  width: 3rem;
-}
-
-.w-20{
-  width: 5rem;
-}
-
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
@@ -639,6 +631,10 @@ video {
   gap: 0.25rem;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -663,6 +659,24 @@ video {
   border-radius: 0.375rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-y-4{
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+}
+
+.border-y-2{
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -684,6 +698,16 @@ video {
   border-color: hsl(0 94% 66% / var(--tw-border-opacity));
 }
 
+.border-veryDarkBlue{
+  --tw-border-opacity: 1;
+  border-color: hsl(229 31% 21% / var(--tw-border-opacity));
+}
+
+.border-grayishBlue{
+  --tw-border-opacity: 1;
+  border-color: hsl(229 8% 60% / var(--tw-border-opacity));
+}
+
 .bg-grayishBlueBg{
   background-color: hsl(229, 8%, 60%, 0.2);
 }
@@ -703,6 +727,10 @@ video {
   background-color: hsl(229 31% 21% / var(--tw-bg-opacity));
 }
 
+.fill-veryDarkBlue{
+  fill: hsl(229, 31%, 21%);
+}
+
 .fill-white{
   fill: #fff;
 }
@@ -715,6 +743,10 @@ video {
   padding: 0.25rem;
 }
 
+.p-10{
+  padding: 2.5rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -725,6 +757,11 @@ video {
 
 .p-8{
   padding: 2rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -747,6 +784,11 @@ video {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg{
@@ -772,8 +814,16 @@ video {
   font-weight: 500;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .uppercase{
   text-transform: uppercase;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
 }
 
 .text-black{
@@ -796,10 +846,26 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline{
   outline-style: solid;
 }
 
 .outline-softRed{
   outline-color: hsl(0, 94%, 66%);
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.active\:outline-none:active{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }

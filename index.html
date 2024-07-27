@@ -20,16 +20,16 @@
   </head>
   <body class="font-custom text-lg">
     <main class="flex flex-col gap-8">
-      <nav class="flex justify-between w-full relative p-8">
+      <nav class="relative flex w-full justify-between p-8">
         <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
         <dialog
           id="menu"
-          class="flex-col justify-between w-screen h-screen bg-veryDarkBlue p-8 absolute top-0 text-center"
+          class="absolute top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
         >
-          <div>
+          <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
               <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
@@ -40,8 +40,15 @@
                     fill-rule="nonzero"
                   />
                   <g>
-                    <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+                    <circle
+                      class="fill-white"
+                      fill="#5267DF"
+                      cx="12.5"
+                      cy="12.5"
+                      r="12.5"
+                    />
                     <path
+                      class="fill-veryDarkBlue"
                       d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
                       fill="#FFF"
                     />
@@ -52,57 +59,77 @@
                 <img src="./src/assets/images/icon-close.svg" alt="" />
               </button>
             </div>
-            <ul>
-              <li><a href="#"></a>Features</li>
-              <li><a href="#"></a>Pricing</li>
-              <li><a href="#"></a>Contact</li>
-            </ul>
-            <button>Login</button>
+            <div class="flex flex-col gap-6">
+              <ul class="flex flex-col text-2xl font-normal uppercase">
+                <li class="border-y-2 border-grayishBlue p-4">
+                  <a href="#">Features</a>
+                </li>
+                <li class="border-b-2 border-grayishBlue p-4">
+                  <a href="#">Pricing</a>
+                </li>
+                <li class="border-b-2 border-grayishBlue p-4">
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+              <button
+                class="w-full rounded-md border border-2 p-2 text-2xl font-medium uppercase"
+              >
+                Login
+              </button>
+            </div>
           </div>
-          <div class="flex gap-4 justify-center">
-            <img src="./src/assets/images//icon-facebook.svg" alt="" />
-            <img src="./src/assets/images/icon-twitter.svg" alt="" />
+          <div>
+            <ul class="flex justify-center gap-8">
+              <li>
+                <a href="#"></a
+                ><img src="./src/assets/images//icon-facebook.svg" alt="" />
+              </li>
+              <li>
+                <a href="#"></a
+                ><img src="./src/assets/images/icon-twitter.svg" alt="" />
+              </li>
+            </ul>
           </div>
         </dialog>
       </nav>
-      <article class="flex flex-col text-center gap-4 p-8">
+      <article class="flex flex-col gap-4 p-8 text-center">
         <img src="./src/assets/images/illustration-hero.svg" alt="" />
-        <h1 class="font-bold text-3xl font-medium">
+        <h1 class="text-3xl font-bold font-medium">
           A Simple Bookmark Manager
         </h1>
         <p class="text-grayishBlue">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <div class="flex gap-4 justify-center">
-          <button class="bg-softBlue rounded-lg h-fit w-fit text-white p-2">
+        <div class="flex justify-center gap-4">
+          <button class="h-fit w-fit rounded-lg bg-softBlue p-2 text-white">
             Get it on Chrome
           </button>
           <button
-            class="text-veryDarkBlue bg-grayishBlueBg rounded-lg h-fit w-fit p-2"
+            class="h-fit w-fit rounded-lg bg-grayishBlueBg p-2 text-veryDarkBlue"
           >
             Get it on Firefox
           </button>
         </div>
       </article>
-      <article class="p-8 text-center flex flex-col gap-4">
-        <h2 id="title" class="font-bold text-2xl font-medium">...</h2>
+      <article class="flex flex-col gap-4 p-8 text-center">
+        <h2 id="title" class="text-2xl font-bold font-medium">...</h2>
         <p id="paragraph">...</p>
         <ul>
-          <li class="border-t-2 border-solid border-b-2">
+          <li class="border-b-2 border-t-2 border-solid">
             <button id="simpleBtn" class="btn p-4">Simple Bookmarking</button>
           </li>
-          <li class="border-solid border-b-2">
+          <li class="border-b-2 border-solid">
             <button id="speedyBtn" class="btn p-4">Speedy Searching</button>
           </li>
-          <li class="border-solid border-b-2">
+          <li class="border-b-2 border-solid">
             <button id="easyBtn" class="btn p-4">Easy Sharing</button>
           </li>
         </ul>
       </article>
-      <article class="flex flex-col p-8 text-center gap-6">
+      <article class="flex flex-col gap-6 p-8 text-center">
         <img src="./src/assets/images/illustration-features-tab-1.svg" alt="" />
-        <h3 class="font-bold text-2xl font-medium">Bookmark in one click</h3>
+        <h3 class="text-2xl font-bold font-medium">Bookmark in one click</h3>
         <p>
           Organize your bookmarks however you like. Our simple drag-and-drop
           interface gives you complete control over how you manage your
@@ -110,60 +137,91 @@
         </p>
       </article>
       <article class="flex flex-col gap-4 p-8">
-        <h4 class="text-center font-bold text-2xl font-medium">
+        <h4 class="text-center text-2xl font-bold font-medium">
           Download the extension
         </h4>
         <p class="text-center">
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
-        <ul class="flex flex-col gap-8 p-2">
-          <li class="flex flex-col items-center gap-2">
-            <img
-              class="w-20"
-              src="./src/assets/images/logo-chrome.svg"
-              alt=""
-            />
-            <span class="font-bold">Add to Chrome</span>
-            <span class="text-grayishBlue">Minimum version 62</span>
-            <button class="bg-softBlue text-white p-2 rounded-lg">
-              Add & Install Extension
-            </button>
+        <ul class="flex flex-col gap-4">
+          <li class="flex flex-col items-center rounded-md shadow">
+            <div class="flex flex-col items-center gap-4 p-10">
+              <img
+                class="w-30"
+                src="./src/assets/images/logo-chrome.svg"
+                alt=""
+              />
+              <div class="flex flex-col items-center gap-1">
+                <span class="text-2xl font-medium">Add to Chrome</span>
+                <span class="text-sm text-grayishBlue">Minimum version 62</span>
+              </div>
+            </div>
+            <div class="flex w-full flex-col justify-center gap-2">
+              <img src="./src/assets/images/bg-dots.svg" alt="" />
+              <div class="flex justify-center p-4">
+                <button class="rounded-lg bg-softBlue p-2 text-white">
+                  Add & Install Extension
+                </button>
+              </div>
+            </div>
           </li>
-          <li class="flex flex-col items-center gap-2">
-            <img
-              class="w-12"
-              src="./src/assets/images/logo-firefox.svg"
-              alt=""
-            />
-            <span class="font-bold">Add to Firefox</span
-            ><span class="text-grayishBlue">Minimum version 55</span>
-            <button class="bg-softBlue text-white p-2 rounded-lg">
-              Add & Install Extension
-            </button>
+          <li class="flex flex-col items-center rounded-md shadow">
+            <div class="flex flex-col items-center gap-4 p-10">
+              <img
+                class="w-30"
+                src="./src/assets/images/logo-firefox.svg"
+                alt=""
+              />
+              <div class="flex flex-col items-center gap-1">
+                <span class="text-2xl font-medium">Add to Firefox</span>
+                <span class="text-sm text-grayishBlue">Minimum version 55</span>
+              </div>
+            </div>
+            <div class="flex w-full flex-col justify-center gap-2">
+              <img src="./src/assets/images/bg-dots.svg" alt="" />
+              <div class="flex justify-center p-4">
+                <button class="rounded-lg bg-softBlue p-2 text-white">
+                  Add & Install Extension
+                </button>
+              </div>
+            </div>
           </li>
-          <li class="flex flex-col items-center gap-2">
-            <img class="w-12" src="./src/assets/images/logo-opera.svg" alt="" />
-            <span class="font-bold">Add to Opera</span>
-            <span class="text-grayishBlue">Minimum version 46</span>
-            <button class="bg-softBlue text-white p-2 rounded-lg">
-              Add & Install Extension
-            </button>
+          <li class="flex flex-col items-center rounded-md shadow">
+            <div class="flex flex-col items-center gap-4 p-10">
+              <img
+                class="w-30"
+                src="./src/assets/images/logo-opera.svg"
+                alt=""
+              />
+              <div class="flex flex-col items-center gap-1">
+                <span class="text-2xl font-medium">Add to Opera</span>
+                <span class="text-sm text-grayishBlue">Minimum version 46</span>
+              </div>
+            </div>
+            <div class="flex w-full flex-col justify-center gap-2">
+              <img src="./src/assets/images/bg-dots.svg" alt="" />
+              <div class="flex justify-center p-4">
+                <button class="rounded-lg bg-softBlue p-2 text-white">
+                  Add & Install Extension
+                </button>
+              </div>
+            </div>
           </li>
         </ul>
       </article>
-      <article class="flex flex-col gap-8 p-8 items-center">
-        <h5 class="text-center font-bold text-2xl">
+      <article class="flex flex-col items-center gap-8 p-8">
+        <h5 class="text-center text-2xl font-bold">
           Frequently Asked Questions
         </h5>
         <p class="text-center">
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </p>
-        <ul class="flex flex-col gap-4 w-full">
-          <li class="faq">
+        <ul class="flex w-full flex-col">
+          <li class="faq flex flex-col gap-2 border-b-2 border-solid py-4">
             <!-- Question 1 -->
-            <button class="question flex w-full justify-between items-center">
+            <button class="question flex w-full items-center justify-between">
               <span class="text-start">What is Bookmark?</span>
               <svg
                 class="inactive"
@@ -188,9 +246,9 @@
             </p>
           </li>
           <!-- Question 2 -->
-          <li class="faq">
+          <li class="faq flex flex-col gap-2 border-b-2 border-solid py-4">
             <button
-              class="question flex w-full justify-between text-start items-center"
+              class="question flex w-full items-center justify-between text-start"
             >
               <span> How can I request a new browser?</span>
               <svg
@@ -219,9 +277,9 @@
             </p>
           </li>
           <!-- Question 3 -->
-          <li class="faq">
+          <li class="faq flex flex-col gap-2 border-b-2 border-solid py-4">
             <button
-              class="question flex w-full justify-between text-start items-center"
+              class="question flex w-full items-center justify-between text-start"
             >
               <span> Is there a mobile app?</span>
               <svg
@@ -248,9 +306,9 @@
             </p>
           </li>
           <!-- Question 4 -->
-          <li class="faq">
+          <li class="faq flex flex-col gap-2 border-b-2 border-solid py-4">
             <button
-              class="question flex justify-between w-full text-start items-center"
+              class="question flex w-full items-center justify-between text-start"
             >
               <span> What about other Chromium browsers? </span>
               <svg
@@ -276,34 +334,34 @@
             </p>
           </li>
         </ul>
-        <button class="bg-softBlue text-white h-fit w-fit p-2 rounded-md">
+        <button class="h-fit w-fit rounded-md bg-softBlue p-2 text-white">
           More Info
         </button>
       </article>
       <section>
         <article
-          class="flex flex-col bg-softBlue p-8 gap-4 text-center text-white"
+          class="flex flex-col gap-4 bg-softBlue p-8 text-center text-white"
         >
-          <span class="uppercase">35,000+ already joined</span>
+          <span class="uppercase tracking-wide">35,000+ already joined</span>
           <h6 class="text-2xl">Stay up-to-date with what we’re doing</h6>
-          <div id="inputDiv" class="flex flex-col rounded-md gap-1">
+          <div id="inputDiv" class="flex flex-col gap-1 rounded-md">
             <input
               id="contactInput"
-              class="p-2 text-black rounded-md cursor-pointer"
+              class="cursor-pointer rounded-md p-4 text-base text-black focus:outline-none active:outline-none"
               type="email"
               placeholder="Enter your Email address"
             />
             <em
-              class="text-start bg-softRed rounded-md text-sm"
+              class="rounded-md bg-softRed text-start text-sm"
               id="error"
             ></em>
           </div>
-          <button id="contactBtn" class="bg-softRed p-2 rounded-md">
+          <button id="contactBtn" class="rounded-md bg-softRed p-2">
             Contact Us
           </button>
         </article>
         <article
-          class="bg-veryDarkBlue flex flex-col items-center text-center gap-6 text-white p-8"
+          class="flex flex-col items-center gap-6 bg-veryDarkBlue p-8 text-center text-white"
         >
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
@@ -327,14 +385,24 @@
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <div class="flex gap-8 justify-center">
-            <img src="./src/assets/images/icon-facebook.svg" alt="" />
-            <img src="./src/assets/images/icon-twitter.svg" alt="" />
+          <div>
+            <ul class="flex justify-center gap-8">
+              <li>
+                <a href="#"
+                  ><img src="./src/assets/images/icon-facebook.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./src/assets/images/icon-twitter.svg" alt=""
+                /></a>
+              </li>
+            </ul>
           </div>
         </article>
       </section>
     </main>
-    <footer class="bg-veryDarkBlue text-white text-center text-xs">
+    <footer class="bg-veryDarkBlue text-center text-xs text-white">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
