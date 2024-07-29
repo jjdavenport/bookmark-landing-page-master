@@ -113,19 +113,19 @@ function desktopNav() {
         <nav class="flex w-full justify-between items-center">
         <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <div class="flex gap-6">
-              <ul class="flex text-xl font-normal uppercase items-center gap-2">
+              <ul class="flex text-xl font-normal uppercase items-center gap-6">
                 <li class="">
-                  <a class=" hover:text-softRed" href="#">Features</a>
+                  <a class=" hover:text-softRed text-base" href="#">Features</a>
                 </li>
                 <li class="">
-                  <a class=" hover:text-softRed" href="#">Pricing</a>
+                  <a class=" hover:text-softRed text-base" href="#">Pricing</a>
                 </li>
                 <li class="">
-                  <a class=" hover:text-softRed" href="#">Contact</a>
+                  <a class=" hover:text-softRed text-base" href="#">Contact</a>
                 </li>
               </ul>
               <button
-                class="transition-all duration-150 ease-in transform hover:outline hover:text-softRed hover:outline-softRed hover:bg-white w-full rounded-md bg-softRed text-white p-2 text-2xl font-medium uppercase"
+                class="transition-all duration-150 ease-in transform hover:outline text-base hover:text-softRed hover:outline-softRed hover:bg-white w-full rounded-md bg-softRed text-white p-2 text-2xl font-medium uppercase"
               >
                 Login
               </button>
