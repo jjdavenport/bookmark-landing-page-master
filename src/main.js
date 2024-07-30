@@ -17,16 +17,23 @@ const features = [
 ];
 
 function mobileButtons() {
+  const zBtn = document.querySelectorAll(".zBtn");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("flex");
     document.body.style.overflow = "hidden";
+    zBtn.forEach((btn) => {
+      btn.classList.add("-z-50");
+    });
   });
   menuCloseBtn.addEventListener("click", () => {
     menu.classList.remove("flex");
     document.body.style.overflow = "auto";
+    zBtn.forEach((btn) => {
+      btn.classList.remove("-z-50");
+    });
   });
 }
 
@@ -115,13 +122,13 @@ function desktopNav() {
         <div class="flex gap-6">
               <ul class="flex text-xl font-normal uppercase items-center gap-6">
                 <li class="">
-                  <a class=" hover:text-softRed text-base" href="#">Features</a>
+                  <a class=" hover:text-softRed text-base transition-colors duration-300 ease-in-out" href="#">Features</a>
                 </li>
                 <li class="">
-                  <a class=" hover:text-softRed text-base" href="#">Pricing</a>
+                  <a class=" hover:text-softRed text-base transition-colors duration-300 ease-in-out" href="#">Pricing</a>
                 </li>
                 <li class="">
-                  <a class=" hover:text-softRed text-base" href="#">Contact</a>
+                  <a class=" hover:text-softRed text-base transition-colors duration-300 ease-in-out" href="#">Contact</a>
                 </li>
               </ul>
               <button
