@@ -604,6 +604,10 @@ video {
   display: none;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .h-3\/4{
   height: 75%;
 }
@@ -619,22 +623,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-6{
-  height: 1.5rem;
-}
-
-.h-12{
-  height: 3rem;
-}
-
-.h-16{
-  height: 4rem;
-}
-
-.h-14{
-  height: 3.5rem;
 }
 
 .w-4\/5{
@@ -703,8 +691,24 @@ video {
   gap: 2.5rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
+.gap-14{
+  gap: 3.5rem;
+}
+
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-20{
+  gap: 5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .gap-4{
@@ -717,22 +721,6 @@ video {
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-12{
-  gap: 3rem;
-}
-
-.gap-20{
-  gap: 5rem;
-}
-
-.gap-3{
-  gap: 0.75rem;
-}
-
-.gap-14{
-  gap: 3.5rem;
 }
 
 .rounded-lg{
@@ -766,6 +754,10 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-b{
+  border-bottom-width: 1px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -776,10 +768,6 @@ video {
 
 .border-t-2{
   border-top-width: 2px;
-}
-
-.border-b{
-  border-bottom-width: 1px;
 }
 
 .border-solid{
@@ -856,28 +844,14 @@ video {
   padding: 2rem;
 }
 
-.p-12{
-  padding: 3rem;
-}
-
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -947,12 +921,8 @@ video {
   text-transform: uppercase;
 }
 
-.tracking-wide{
-  letter-spacing: 0.025em;
-}
-
-.tracking-wider{
-  letter-spacing: 0.05em;
+.tracking-widest{
+  letter-spacing: 0.1em;
 }
 
 .text-black{
@@ -973,18 +943,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.shadow{
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-md{
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg{
@@ -1079,6 +1037,14 @@ video {
 }
 
 @media (min-width: 768px){
+  .md\:mt-12{
+    margin-top: 3rem;
+  }
+
+  .md\:mt-6{
+    margin-top: 1.5rem;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -1087,16 +1053,17 @@ video {
     display: grid;
   }
 
-  .md\:h-14{
-    height: 3.5rem;
-  }
-
-  .md\:h-16{
-    height: 4rem;
-  }
-
   .md\:h-12{
     height: 3rem;
+  }
+
+  .md\:h-96{
+    height: 24rem;
+  }
+
+  .md\:h-fit{
+    height: -moz-fit-content;
+    height: fit-content;
   }
 
   .md\:w-1\/2{
@@ -1136,6 +1103,10 @@ video {
     flex-direction: column;
   }
 
+  .md\:items-end{
+    align-items: flex-end;
+  }
+
   .md\:items-center{
     align-items: center;
   }
@@ -1156,12 +1127,32 @@ video {
     gap: 0px;
   }
 
-  .md\:gap-12{
-    gap: 3rem;
+  .md\:gap-10{
+    gap: 2.5rem;
+  }
+
+  .md\:gap-14{
+    gap: 3.5rem;
   }
 
   .md\:gap-2{
     gap: 0.5rem;
+  }
+
+  .md\:gap-3{
+    gap: 0.75rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .md\:gap-8{
+    gap: 2rem;
+  }
+
+  .md\:gap-customClampUl{
+    gap: clamp(0.5rem, -1.2143rem + 3.5714vw, 2rem);;
   }
 
   .md\:self-center{
@@ -1180,31 +1171,35 @@ video {
     padding: 1rem;
   }
 
-  .md\:p-16{
-    padding: 4rem;
+  .md\:p-customClampBtn{
+    padding: clamp(0.5rem, -0.0714rem + 1.1905vw, 1rem);;
   }
 
-  .md\:p-20{
-    padding: 5rem;
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .md\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .md\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:py-40{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+  .md\:px-customClampNav{
+    padding-left: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
+    padding-right: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
   }
 
   .md\:pl-8{
     padding-left: 2rem;
+  }
+
+  .md\:pl-customClamp{
+    padding-left: clamp(0.5rem, -3.5rem + 8.3333vw, 4rem);;
+  }
+
+  .md\:pr-customClamp{
+    padding-right: clamp(0.5rem, -3.5rem + 8.3333vw, 4rem);;
   }
 
   .md\:text-left{
@@ -1227,6 +1222,11 @@ video {
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-base{

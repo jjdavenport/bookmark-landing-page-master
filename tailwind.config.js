@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       padding: {
-        customClamp: "clamp(0.5rem, -8.0714rem + 17.8571vw, 8rem)",
+        customClampBtn: "clamp(0.5rem, -0.0714rem + 1.1905vw, 1rem);",
+        customClampNav: "clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);",
+        customClamp: "clamp(0.5rem, -3.5rem + 8.3333vw, 4rem);",
+      },
+      gap: {
+        customClampUl: "clamp(0.5rem, -1.2143rem + 3.5714vw, 2rem);",
       },
       backgroundImage: {
         error: "url('./src/assets/images/icon-error.svg')",

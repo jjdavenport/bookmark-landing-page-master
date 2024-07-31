@@ -132,7 +132,7 @@ function desktopNav() {
                 </li>
               </ul>
               <button
-                class="transition-all duration-150 ease-in transform hover:outline text-base hover:text-softRed hover:outline-softRed hover:bg-white w-full rounded-md bg-softRed text-white p-2 text-2xl font-medium uppercase"
+                class="md:px-4 transition-all duration-150 ease-in transform hover:outline text-base hover:text-softRed hover:outline-softRed hover:bg-white w-full rounded-md bg-softRed text-white p-2 text-2xl font-medium uppercase"
               >
                 Login
               </button>

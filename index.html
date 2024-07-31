@@ -19,8 +19,8 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body class="font-custom text-lg">
-    <main class="flex flex-col gap-20 md:gap-12">
-      <nav class="relative flex w-full justify-between p-8">
+    <main class="flex flex-col gap-20 md:gap-14">
+      <nav class="relative flex w-full justify-between p-8 md:px-customClampNav">
         <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
@@ -95,13 +95,14 @@
       <section class="md:flex md:flex-row-reverse md:w-full items-center">
         <div class="relative w-full h-auto md:w-1/2">
           <div class="absolute bottom-0 right-0 bg-softBlue w-4/5 h-3/4 rounded-l-full -z-20"></div>
-          <img class="object-cover w-full h-auto relative -z-10" src="./src/assets/images/illustration-hero.svg" alt="" />
+          <img class="object-cover w-full h-auto relative -z-10 md:pr-customClamp" src="./src/assets/images/illustration-hero.svg" alt="" />
         </div>
         <article
         class="flex flex-col gap-4 p-8 text-center md:flex-row-reverse md:items-center md:w-1/2"
       >
-        <div class="flex flex-col gap-4 md:text-start">
-          <h1 class="text-3xl font-bold font-medium md:text-4xl">
+        <div class="flex flex-col md:text-start md:items-end md:pl-customClamp">
+          <div class="flex flex-col md:gap-5 gap-4">
+          <h1 class="text-3xl font-bold font-medium md:text-5xl">
             A Simple Bookmark Manager
           </h1>
           <p class="text-grayishBlue">
@@ -121,36 +122,37 @@
               Get it on Firefox
             </button>
           </div>
+          </div>
         </div>
       </article>
       </section>
-      <article class="flex flex-col gap-10 p-8 text-center">
-        <div class="flex flex-col gap-2">
-        <h2 id="title" class="text-2xl font-bold font-medium">...</h2>
+      <article class="flex flex-col gap-10 p-8 text-center md:items-center">
+        <div class="flex flex-col gap-2 md:w-1/2 md:gap-3">
+        <h2 id="title" class="text-2xl md:text-4xl font-bold font-medium">...</h2>
         <p id="paragraph" class="text-grayishBlue">...</p>
       </div>
         <ul class="md:grid md:grid-cols-3 md:w-fit md:self-center">
           <li class="border-b-2 border-t-2 border-solid md:border-t-0">
-            <button id="simpleBtn" class="btn p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
+            <button id="simpleBtn" class="btn md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
               Simple Bookmarking
             </button>
           </li>
           <li class="border-b-2 border-solid">
-            <button id="speedyBtn" class="btn p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
+            <button id="speedyBtn" class="btn md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
               Speedy Searching
             </button>
           </li>
           <li class="border-b-2 border-solid transition-colors duration-300 ease-in-out hover:text-softRed">
-            <button id="easyBtn" class="btn p-4 md:w-full">Easy Sharing</button>
+            <button id="easyBtn" class="btn md:px-8 p-4 md:w-full">Easy Sharing</button>
           </li>
         </ul>
       </article>
       <section class="md:flex md:w-full">
         <div class="relative w-full h-auto md:w-1/2">
           <div class="w-4/6 absolute bottom-0 left-0 bg-softBlue w-4/5 h-3/4 rounded-r-full -z-20"></div>
-          <img class="object-cover w-auto h-auto relative -z-10 p-6 m-auto" src="./src/assets/images/illustration-features-tab-1.svg" alt="" />
+          <img class="object-cover w-auto h-auto relative -z-10 p-10 m-auto md:pl-customClamp" src="./src/assets/images/illustration-features-tab-1.svg" alt="" />
         </div>
-      <article class="flex flex-col gap-6 p-8 text-center md:flex-row md:w-1/2 md:text-start">
+      <article class="flex flex-col gap-6 p-8 text-center md:flex-row md:w-1/2 md:text-start md:pr-customClamp">
         <div class="flex flex-col justify-center md:gap-2 gap-3">
           <h3 class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
           <p class="text-grayishBlue">
@@ -161,9 +163,9 @@
         </div>
       </article>
     </section>
-      <article class="flex flex-col gap-14 p-8 md:justify-center">
-        <div class="flex flex-col gap-2">
-        <h4 class="text-center text-2xl font-bold font-medium">
+      <article class="flex flex-col gap-14 p-8 md:justify-center md:items-center">
+        <div class="flex flex-col gap-2 md:w-1/2">
+        <h4 class="text-center text-2xl md:text-3xl font-bold font-medium">
           Download the extension
         </h4>
         <p class="text-center text-grayishBlue">
@@ -171,9 +173,9 @@
           you’ve got a favourite you’d like us to prioritize.
         </p>
       </div>
-        <ul class="flex flex-col gap-12 md:grid md:grid-cols-3">
-          <li class="flex flex-col items-center rounded-lg shadow-lg">
-            <div class="flex flex-col items-center gap-4 p-10">
+        <ul class="flex flex-col gap-12 md:gap-customClampUl md:grid md:grid-cols-3">
+          <li class="flex flex-col items-center rounded-lg shadow-lg md:h-96 md:justify-between">
+            <div class="flex flex-col items-center gap-4 p-10 md:h-fit">
               <img
                 class="w-30"
                 src="./src/assets/images/logo-chrome.svg"
@@ -184,9 +186,9 @@
                 <span class="text-sm text-grayishBlue">Minimum version 62</span>
               </div>
             </div>
-            <div class="flex w-full flex-col justify-center gap-2">
+            <div class="flex w-full flex-col justify-center gap-2 md:h-fit">
               <img src="./src/assets/images/bg-dots.svg" alt="" />
-              <div class="flex justify-center p-6">
+              <div class="flex justify-center p-6 md:p-customClampBtn">
                 <button
                   class="w-full h-14 transition-all duration-150 ease-in transform rounded-lg bg-softBlue p-2 text-white hover:bg-white hover:text-softBlue hover:outline hover:outline-2 hover:outline-softBlue"
                 >
@@ -195,8 +197,8 @@
               </div>
             </div>
           </li>
-          <li class="flex flex-col items-center rounded-lg shadow-lg">
-            <div class="flex flex-col items-center gap-4 p-10">
+          <li class="flex flex-col items-center rounded-lg shadow-lg md:h-96 md:mt-6 md:justify-between">
+            <div class="flex flex-col items-center gap-4 p-10 md:h-fit">
               <img
                 class="w-30"
                 src="./src/assets/images/logo-firefox.svg"
@@ -207,9 +209,9 @@
                 <span class="text-sm text-grayishBlue">Minimum version 55</span>
               </div>
             </div>
-            <div class="flex w-full flex-col justify-center gap-2">
+            <div class="flex w-full flex-col justify-center gap-2 md:h-fit">
               <img src="./src/assets/images/bg-dots.svg" alt="" />
-              <div class="flex justify-center p-6">
+              <div class="flex justify-center p-6 md:p-customClampBtn">
                 <button
                   class="w-full h-14 transition-all duration-150 ease-in transform rounded-lg bg-softBlue p-2 text-white hover:bg-white hover:text-softBlue hover:outline hover:outline-2 hover:outline-softBlue"
                 >
@@ -218,8 +220,8 @@
               </div>
             </div>
           </li>
-          <li class="flex flex-col items-center rounded-lg shadow-lg">
-            <div class="flex flex-col items-center gap-4 p-10">
+          <li class="flex flex-col items-center rounded-lg shadow-lg md:h-96 md:mt-12 md:justify-between">
+            <div class="flex flex-col items-center gap-4 p-10 md:h-fit">
               <img
                 class="w-30"
                 src="./src/assets/images/logo-opera.svg"
@@ -230,9 +232,9 @@
                 <span class="text-sm text-grayishBlue">Minimum version 46</span>
               </div>
             </div>
-            <div class="flex w-full flex-col justify-center gap-2">
+            <div class="flex w-full flex-col justify-center gap-2 md:h-fit">
               <img src="./src/assets/images/bg-dots.svg" alt="" />
-              <div class="flex justify-center p-6">
+              <div class="flex justify-center p-6 md:p-customClampBtn">
                 <button
                   class="w-full h-14 transition-all duration-150 ease-in transform rounded-lg bg-softBlue p-2 text-white hover:bg-white hover:text-softBlue hover:outline hover:outline-2 hover:outline-softBlue"
                 >
@@ -244,8 +246,8 @@
         </ul>
       </article>
       <article class="flex flex-col items-center gap-10 p-8">
-        <div class="flex flex-col gap-3">
-        <h5 class="text-center text-2xl font-semibold">
+        <div class="flex flex-col gap-3  md:w-1/2 md:items-center">
+        <h5 class="text-center text-2xl md:text-4xl font-semibold">
           Frequently Asked Questions
         </h5>
         <p class="text-center text-grayishBlue">
@@ -379,10 +381,10 @@
         <article
           class="flex flex-col bg-softBlue p-8 py-20 text-center text-white md:items-center"
         >
-          <div class="flex flex-col gap-6 md:w-fit md:flex-col">
-            <div class="flex flex-col gap-2">
-            <span class="uppercase tracking-wider text-base">35,000+ already joined</span>
-            <h6 class="text-2xl md:text-4xl font-semibold">Stay up-to-date with what we’re doing</h6>
+          <div class="flex flex-col gap-6 md:w-fit md:flex-col md:gap-10">
+            <div class="flex flex-col gap-2 md:gap-8">
+            <span class="uppercase tracking-widest text-base">35,000+ already joined</span>
+            <h6 class="text-2xl md:text-3xl font-semibold">Stay up-to-date with what we’re doing</h6>
           </div>
             <div class="flex md:h-18 h-fit flex-col gap-4 md:flex-row">
               <div id="inputDiv" class="flex md:h-18 flex-col gap-2 md:gap-0 rounded-md md:w-full ">
