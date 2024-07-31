@@ -144,7 +144,7 @@ function desktopNav() {
 function mobileNav() {
   const nav = document.querySelector("nav");
   nav.innerHTML = `
-    <img src="./src/assets/images/logo-bookmark.svg" alt="" />
+           <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
@@ -202,7 +202,7 @@ function mobileNav() {
             </div>
           </div>
           <div>
-            <ul class="flex justify-center gap-8">
+            <ul class="flex justify-center gap-8 text-center">
               <li>
                 <a href="#"></a
                 ><img src="./src/assets/images//icon-facebook.svg" alt="" />
