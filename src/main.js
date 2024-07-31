@@ -21,19 +21,28 @@ function mobileButtons() {
   if (windowSize >= 768) {
     return;
   }
+
   const zBtn = document.querySelectorAll(".zBtn");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
+
   menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("flex");
+    menu.classList.remove("translate-x-full");
+    menu.classList.add("translate-x-0");
+    menu.classList.add("flex");
     document.body.style.overflow = "hidden";
     zBtn.forEach((btn) => {
       btn.classList.add("-z-50");
     });
   });
+
   menuCloseBtn.addEventListener("click", () => {
-    menu.classList.remove("flex");
+    menu.classList.add("translate-x-full");
+    menu.classList.remove("translate-x-0");
+    setTimeout(() => {
+      menu.classList.remove("flex");
+    }, 300);
     document.body.style.overflow = "auto";
     zBtn.forEach((btn) => {
       btn.classList.remove("-z-50");
@@ -124,9 +133,42 @@ function desktopMobileNav() {
   const windowSize = window.innerWidth;
   if (windowSize >= 768) {
     desktopNav();
+    desktopArticle();
   } else {
     mobileNav();
+    mobileArticle();
   }
+}
+
+function desktopArticle() {
+  const article = document.querySelector(".article");
+  article.innerHTML = `
+    <div class="flex flex-col justify-center md:gap-4 gap-3">
+          <h3 class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
+          <p class="text-grayishBlue">
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourite sites.
+          </p>
+          <button class="h-fit w-fit rounded-md bg-softBlue p-2 text-white">
+          More Info
+        </button>
+        </div>
+  `;
+}
+
+function mobileArticle() {
+  const article = document.querySelector(".article");
+  article.innerHTML = `
+       <div class="flex flex-col justify-center md:gap-4 gap-3">
+          <h3 class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
+          <p class="text-grayishBlue">
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourite sites.
+          </p>
+        </div>
+  `;
 }
 
 function desktopNav() {
@@ -165,7 +207,7 @@ function mobileNav() {
         </button>
         <dialog
           id="menu"
-          class="absolute z-10 top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
+          class="absolute z-10 top-0 right-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out"
         >
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
@@ -199,13 +241,13 @@ function mobileNav() {
             </div>
             <div class="flex flex-col gap-6">
               <ul class="flex flex-col text-2xl font-normal uppercase">
-                <li class="border-y-2 border-grayishBlue p-4">
+                <li class="border-y border-grayishBlue p-4">
                   <a class="z-0" href="#">Features</a>
                 </li>
-                <li class="border-b-2 border-grayishBlue p-4">
+                <li class="border-b border-grayishBlue p-4">
                   <a class="z-0" href="#">Pricing</a>
                 </li>
-                <li class="border-b-2 border-grayishBlue p-4">
+                <li class="border-b border-grayishBlue p-4">
                   <a class="z-0" href="#">Contact</a>
                 </li>
               </ul>
