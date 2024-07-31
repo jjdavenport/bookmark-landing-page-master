@@ -17,6 +17,10 @@ const features = [
 ];
 
 function mobileButtons() {
+  const windowSize = window.innerWidth;
+  if (windowSize >= 768) {
+    return;
+  }
   const zBtn = document.querySelectorAll(".zBtn");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
@@ -50,11 +54,12 @@ function buttons() {
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
+      contactInput.classList.add("bg-error");
       error.classList.add("p-1");
     } else if (!regex.test(input)) {
-      console.log("invalid");
-      error.innerText = "Whoops, make sure it's an email";
+      error.innerText = "Whoops, make sure it's an email address";
       error.classList.add("p-1");
+      contactInput.classList.add("bg-error");
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
     } else {
       error.innerText = "";
@@ -63,13 +68,23 @@ function buttons() {
       inputDiv.classList.remove("outline", "outline-softRed", "bg-softRed");
     }
   });
-  faq.forEach((faq) => {
-    const path = faq.querySelector(".inactive-path");
-    const svg = faq.querySelector(".inactive");
-    const question = faq.querySelector(".question");
-    const answer = faq.querySelector(".answer");
+  faq.forEach((faqElement) => {
+    const path = faqElement.querySelector(".inactive-path");
+    const svg = faqElement.querySelector(".inactive");
+    const question = faqElement.querySelector(".question");
+    const answer = faqElement.querySelector(".answer");
+    answer.style.maxHeight = answer.scrollHeight + "px";
     question.addEventListener("click", () => {
-      answer.classList.toggle("hidden");
+      const hidden = answer.classList.contains("hidden");
+      if (hidden) {
+        answer.classList.remove("hidden");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = 0;
+        setTimeout(() => {
+          answer.classList.add("hidden");
+        }, 300);
+      }
       path.classList.toggle("stroke-softRed");
       svg.classList.toggle("transform");
       svg.classList.toggle("rotate-180");
@@ -144,13 +159,13 @@ function desktopNav() {
 function mobileNav() {
   const nav = document.querySelector("nav");
   nav.innerHTML = `
-           <img src="./src/assets/images/logo-bookmark.svg" alt="" />
+          <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
         <dialog
           id="menu"
-          class="absolute top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
+          class="absolute z-10 top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
         >
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
@@ -185,17 +200,17 @@ function mobileNav() {
             <div class="flex flex-col gap-6">
               <ul class="flex flex-col text-2xl font-normal uppercase">
                 <li class="border-y-2 border-grayishBlue p-4">
-                  <a href="#">Features</a>
+                  <a class="z-0" href="#">Features</a>
                 </li>
                 <li class="border-b-2 border-grayishBlue p-4">
-                  <a href="#">Pricing</a>
+                  <a class="z-0" href="#">Pricing</a>
                 </li>
                 <li class="border-b-2 border-grayishBlue p-4">
-                  <a href="#">Contact</a>
+                  <a class="z-0" href="#">Contact</a>
                 </li>
               </ul>
               <button
-                class="w-full rounded-md border border-2 p-2 text-2xl font-medium uppercase"
+                class="z-0 w-full rounded-md border border-2 p-2 text-2xl font-medium uppercase"
               >
                 Login
               </button>
@@ -204,12 +219,12 @@ function mobileNav() {
           <div>
             <ul class="flex justify-center gap-8 text-center">
               <li>
-                <a href="#"></a
-                ><img src="./src/assets/images//icon-facebook.svg" alt="" />
+                <a href="#"><img src="./src/assets/images//icon-facebook.svg" alt="" /></a
+                >
               </li>
               <li>
-                <a href="#"></a
-                ><img src="./src/assets/images/icon-twitter.svg" alt="" />
+                <a href="#"><img src="./src/assets/images/icon-twitter.svg" alt="" /></a
+                >
               </li>
             </ul>
           </div>

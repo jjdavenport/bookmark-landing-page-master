@@ -21,13 +21,13 @@
   <body class="font-custom text-lg">
     <main class="flex flex-col gap-20 md:gap-14">
       <nav class="relative flex w-full justify-between p-8 md:px-customClampNav">
-        <img src="./src/assets/images/logo-bookmark.svg" alt="" />
+          <img src="./src/assets/images/logo-bookmark.svg" alt="" />
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
         <dialog
           id="menu"
-          class="absolute top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
+          class="absolute z-10 top-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white"
         >
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
@@ -62,17 +62,17 @@
             <div class="flex flex-col gap-6">
               <ul class="flex flex-col text-2xl font-normal uppercase">
                 <li class="border-y-2 border-grayishBlue p-4">
-                  <a href="#">Features</a>
+                  <a class="z-0" href="#">Features</a>
                 </li>
                 <li class="border-b-2 border-grayishBlue p-4">
-                  <a href="#">Pricing</a>
+                  <a class="z-0" href="#">Pricing</a>
                 </li>
                 <li class="border-b-2 border-grayishBlue p-4">
-                  <a href="#">Contact</a>
+                  <a class="z-0" href="#">Contact</a>
                 </li>
               </ul>
               <button
-                class="w-full rounded-md border border-2 p-2 text-2xl font-medium uppercase"
+                class="z-0 w-full rounded-md border border-2 p-2 text-2xl font-medium uppercase"
               >
                 Login
               </button>
@@ -81,12 +81,12 @@
           <div>
             <ul class="flex justify-center gap-8 text-center">
               <li>
-                <a href="#"></a
-                ><img src="./src/assets/images//icon-facebook.svg" alt="" />
+                <a href="#"><img src="./src/assets/images//icon-facebook.svg" alt="" /></a
+                >
               </li>
               <li>
-                <a href="#"></a
-                ><img src="./src/assets/images/icon-twitter.svg" alt="" />
+                <a href="#"><img src="./src/assets/images/icon-twitter.svg" alt="" /></a
+                >
               </li>
             </ul>
           </div>
@@ -278,7 +278,7 @@
               </svg>
             </button>
             <!-- Answer 1 -->
-            <p class="answer hidden">
+            <p class="answer hidden transition-all duration-300 ease-in-out overflow-hidden">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
               quis quam ornare mattis.
@@ -306,7 +306,7 @@
               </svg>
             </button>
             <!-- Answer 2 -->
-            <p class="answer hidden">
+            <p class="answer hidden transition-all duration-300 ease-in-out overflow-hidden">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
               eros aliquet convallis ultricies. Mauris augue massa, ultricies
@@ -337,7 +337,7 @@
               </svg>
             </button>
             <!-- Answer 3 -->
-            <p class="answer hidden">
+            <p class="answer hidden transition-all duration-300 ease-in-out overflow-hidden">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
               ligula quis est pharetra mattis sit amet pharetra purus. Sed
@@ -366,7 +366,7 @@
               </svg>
             </button>
             <!-- Answer 4 -->
-            <p class="answer hidden">
+            <p class="answer hidden transition-all duration-300 ease-in-out overflow-hidden">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
               pellentesque non ut velit.
@@ -386,7 +386,7 @@
             <span class="uppercase tracking-widest text-base">35,000+ already joined</span>
             <h6 class="text-2xl md:text-3xl font-semibold">Stay up-to-date with what we’re doing</h6>
           </div>
-            <div class="flex md:h-18 h-fit flex-col gap-4 md:flex-row">
+            <div class="flex md:h-18 h-fit flex-col gap-4 md:flex-row ">
               <div id="inputDiv" class="flex md:h-18 flex-col gap-2 md:gap-0 rounded-md md:w-full ">
                 <input
                   id="contactInput"

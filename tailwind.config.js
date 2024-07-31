@@ -12,7 +12,7 @@ module.exports = {
         customClampUl: "clamp(0.5rem, -1.2143rem + 3.5714vw, 2rem);",
       },
       backgroundImage: {
-        error: "url('./src/assets/images/icon-error.svg')",
+        error: `./src/assets/images/icon-error.svg`,
       },
       fontFamily: {
         custom: ["rubik", "sans-serif"],
