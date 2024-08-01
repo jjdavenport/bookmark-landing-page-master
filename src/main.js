@@ -21,22 +21,21 @@ function mobileButtons() {
   if (windowSize >= 768) {
     return;
   }
-
   const zBtn = document.querySelectorAll(".zBtn");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
-
+  menu.classList.add("translate-x-full");
   menuBtn.addEventListener("click", () => {
+    menu.classList.add("flex");
+    void menu.offsetWidth;
     menu.classList.remove("translate-x-full");
     menu.classList.add("translate-x-0");
-    menu.classList.add("flex");
     document.body.style.overflow = "hidden";
     zBtn.forEach((btn) => {
       btn.classList.add("-z-50");
     });
   });
-
   menuCloseBtn.addEventListener("click", () => {
     menu.classList.add("translate-x-full");
     menu.classList.remove("translate-x-0");
@@ -205,10 +204,7 @@ function mobileNav() {
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
-        <dialog
-          id="menu"
-          class="absolute z-10 top-0 right-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out"
-        >
+        <dialog id="menu" class="absolute z-10 top-0 right-0 h-screen w-screen flex flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out">
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
               <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
