@@ -11,11 +11,11 @@ module.exports = {
       gap: {
         customClampUl: "clamp(0.5rem, -1.2143rem + 3.5714vw, 2rem);",
       },
-      backgroundPosition: {
-        rightCustom: "95%, 90%",
-      },
       backgroundImage: {
         errorImg: "url('/src/assets/images/icon-error.svg')",
+      },
+      backgroundPosition: {
+        rightCustom: "95%, 90%",
       },
       fontFamily: {
         custom: ["rubik", "sans-serif"],
