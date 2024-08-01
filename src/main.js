@@ -21,13 +21,15 @@ function mobileButtons() {
   if (windowSize >= 768) {
     return;
   }
+  const main = document.querySelector("main");
   const zBtn = document.querySelectorAll(".zBtn");
   const menuBtn = document.getElementById("menuBtn");
   const menu = document.getElementById("menu");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
-  menu.classList.add("translate-x-full");
+  menu.classList.add("translate-x-full", "overflow-hidden");
   menuBtn.addEventListener("click", () => {
     menu.classList.add("flex");
+    main.style.overflow = "hidden";
     void menu.offsetWidth;
     menu.classList.remove("translate-x-full");
     menu.classList.add("translate-x-0");
@@ -37,10 +39,12 @@ function mobileButtons() {
     });
   });
   menuCloseBtn.addEventListener("click", () => {
+    main.style.overflow = "auto";
     menu.classList.add("translate-x-full");
     menu.classList.remove("translate-x-0");
     setTimeout(() => {
       menu.classList.remove("flex");
+      menu.classList.add("overflow-hidden");
     }, 300);
     document.body.style.overflow = "auto";
     zBtn.forEach((btn) => {
@@ -62,18 +66,19 @@ function buttons() {
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
-      contactInput.classList.add("bg-error");
+      contactInput.classList.add("bg-errorImg");
       error.classList.add("p-1");
     } else if (!regex.test(input)) {
       error.innerText = "Whoops, make sure it's an email address";
       error.classList.add("p-1");
-      contactInput.classList.add("bg-error");
+      contactInput.classList.add("bg-errorImg");
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
     } else {
       error.innerText = "";
       contactInput.value = "";
       error.classList.remove("p-1");
       inputDiv.classList.remove("outline", "outline-softRed", "bg-softRed");
+      contactInput.classList.remove("bg-errorImg");
     }
   });
   faq.forEach((faqElement) => {
@@ -99,14 +104,21 @@ function buttons() {
     });
   });
   updateFeature(features[0]);
-  tabBtn[0].classList.add("border-b-4", "border-softRed", "transition-border");
+  tabBtn[0].classList.add(
+    "border-b-4",
+    "border-softRed",
+    "text-black",
+    "transition-border",
+  );
+  tabBtn[0].classList.remove("text-grayishBlue");
   tabBtn.forEach((btn, i) => {
     btn.addEventListener("click", () => {
       tabBtn.forEach((button) => {
-        button.classList.remove("border-b-4", "border-softRed");
-        button.classList.add("transition-border");
+        button.classList.remove("border-b-4", "border-softRed", "text-black");
+        button.classList.add("transition-border", "text-grayishBlue");
       });
-      btn.classList.add("border-b-4", "border-softRed");
+      btn.classList.add("border-b-4", "border-softRed", "text,black");
+      btn.classList.remove("text-grayishBlue");
       updateFeature(features[i]);
     });
   });

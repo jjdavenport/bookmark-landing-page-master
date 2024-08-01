@@ -556,10 +556,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.visible{
-  visibility: visible;
-}
-
 .absolute{
   position: absolute;
 }
@@ -829,8 +825,16 @@ video {
   background-color: hsl(229 31% 21% / var(--tw-bg-opacity));
 }
 
-.bg-error{
-  background-image: ./src/assets/images/icon-error.svg;
+.bg-errorImg{
+  background-image: url('/src/assets/images/icon-error.svg');
+}
+
+.bg-rightCustom{
+  background-position: 95%, 90%;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .fill-veryDarkBlue{
@@ -1232,10 +1236,6 @@ video {
   .md\:px-customClampNav{
     padding-left: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
     padding-right: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
-  }
-
-  .md\:pl-8{
-    padding-left: 2rem;
   }
 
   .md\:pl-customClamp{
