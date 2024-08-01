@@ -25,7 +25,7 @@
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
-        <dialog id="menu" class="absolute z-10 top-0 right-0 h-screen w-screen flex flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+        <dialog id="menu" class="absolute z-10 top-0 right-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out">
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
               <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
@@ -130,17 +130,17 @@
       </div>
         <ul class="md:grid md:grid-cols-3 md:w-fit md:self-center">
           <li class="border-b-2 border-t-2 border-solid md:border-t-0">
-            <button id="simpleBtn" class="btn md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
+            <button class="btn transition-border md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
               Simple Bookmarking
             </button>
           </li>
           <li class="border-b-2 border-solid">
-            <button id="speedyBtn" class="btn md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
+            <button class="btn transition-border md:px-8 p-4 md:w-full transition-colors duration-300 ease-in-out hover:text-softRed">
               Speedy Searching
             </button>
           </li>
           <li class="border-b-2 border-solid transition-colors duration-300 ease-in-out hover:text-softRed">
-            <button id="easyBtn" class="btn md:px-8 p-4 md:w-full">Easy Sharing</button>
+            <button class="btn transition-border md:px-8 p-4 md:w-full">Easy Sharing</button>
           </li>
         </ul>
       </article>
@@ -406,7 +406,7 @@
           </div>
         </article>
         <article
-          class="flex flex-col items-center gap-6 bg-veryDarkBlue p-10 text-center text-white md:flex-row md:justify-between"
+          class="flex md:px-customClampNav flex-col items-center gap-6 bg-veryDarkBlue p-10 text-center text-white md:flex-row md:justify-between"
         >
           <div class="flex flex-col gap-8 md:flex-row md:items-center">
             <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
@@ -448,7 +448,7 @@
       </section>
     </main>
     <footer
-      class="bg-veryDarkBlue text-center text-xs text-white md:pl-8 md:text-left"
+      class="bg-veryDarkBlue text-center text-xs text-white md:px-customClampNav md:text-left"
     >
       <p>
         Challenge by

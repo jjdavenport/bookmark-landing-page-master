@@ -99,12 +99,13 @@ function buttons() {
     });
   });
   updateFeature(features[0]);
-  tabBtn[0].classList.add("border-b-4", "border-softRed");
+  tabBtn[0].classList.add("border-b-4", "border-softRed", "transition-border");
   tabBtn.forEach((btn, i) => {
     btn.addEventListener("click", () => {
-      tabBtn.forEach((button) =>
-        button.classList.remove("border-b-4", "border-softRed"),
-      );
+      tabBtn.forEach((button) => {
+        button.classList.remove("border-b-4", "border-softRed");
+        button.classList.add("transition-border");
+      });
       btn.classList.add("border-b-4", "border-softRed");
       updateFeature(features[i]);
     });
@@ -204,7 +205,7 @@ function mobileNav() {
         <button id="menuBtn">
           <img src="./src/assets/images/icon-hamburger.svg" alt="" />
         </button>
-        <dialog id="menu" class="absolute z-10 top-0 right-0 h-screen w-screen flex flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+        <dialog id="menu" class="absolute z-10 top-0 right-0 h-screen w-screen flex-col justify-between bg-veryDarkBlue p-8 text-center text-white transform translate-x-full transition-transform duration-300 ease-in-out">
           <div class="flex flex-col gap-10">
             <div class="flex w-full justify-between">
               <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
