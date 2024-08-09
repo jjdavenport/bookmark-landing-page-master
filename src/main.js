@@ -50,7 +50,6 @@ function mobileButtons() {
       menu.classList.add("overflow-hidden");
     }, 300);
     document.body.style.overflow = "auto";
-    image: "./assets/images/illustration-features-tab-1.svg";
     zBtn.forEach((btn) => {
       btn.classList.remove("-z-50");
     });
@@ -70,19 +69,25 @@ function buttons() {
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
-      contactInput.classList.add("bg-errorImg");
+      contactInput.classList.add(
+        "bg-[url('../src/assets/images/icon-error.svg')]",
+      );
       error.classList.add("p-1");
     } else if (!regex.test(input)) {
       error.innerText = "Whoops, make sure it's an email address";
       error.classList.add("p-1");
-      contactInput.classList.add("bg-errorImg");
+      contactInput.classList.add(
+        "bg-[url('../src/assets/images/icon-error.svg')]",
+      );
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
     } else {
       error.innerText = "";
       contactInput.value = "";
       error.classList.remove("p-1");
       inputDiv.classList.remove("outline", "outline-softRed", "bg-softRed");
-      contactInput.classList.remove("bg-errorImg");
+      contactInput.classList.remove(
+        "bg-[url('../src/assets/images/icon-error.svg')]",
+      );
     }
   });
   faq.forEach((faqElement) => {

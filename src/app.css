@@ -825,8 +825,8 @@ video {
   background-color: hsl(229 31% 21% / var(--tw-bg-opacity));
 }
 
-.bg-errorImg{
-  background-image: url('/src/assets/images/icon-error.svg');
+.bg-\[url\(\'\.\.\/src\/assets\/images\/icon-error\.svg\'\)\]{
+  background-image: url('../src/assets/images/icon-error.svg');
 }
 
 .bg-rightCustom{
