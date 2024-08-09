@@ -1,18 +1,21 @@
 const features = [
   {
-    title: "Features",
+    title: "Bookmark in one click",
     paragraph:
-      "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.",
+      "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
+    image: "src/assets/images//illustration-features-tab-1.svg",
   },
   {
     title: "Intelligent search",
     paragraph:
       "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
+    image: "src/assets/images//illustration-features-tab-2.svg",
   },
   {
     title: "Share your bookmarks",
     paragraph:
       "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+    image: "src/assets/images/illustration-features-tab-3.svg",
   },
 ];
 
@@ -47,6 +50,7 @@ function mobileButtons() {
       menu.classList.add("overflow-hidden");
     }, 300);
     document.body.style.overflow = "auto";
+    image: "./assets/images/illustration-features-tab-1.svg";
     zBtn.forEach((btn) => {
       btn.classList.remove("-z-50");
     });
@@ -127,8 +131,10 @@ function buttons() {
 const updateFeature = (feature) => {
   const featureTitle = document.getElementById("title");
   const featureParagraph = document.getElementById("paragraph");
+  const tabImg = document.getElementById("tabImg");
   featureTitle.textContent = feature.title;
   featureParagraph.textContent = feature.paragraph;
+  tabImg.src = feature.image;
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -156,11 +162,8 @@ function desktopArticle() {
   const article = document.querySelector(".article");
   article.innerHTML = `
     <div class="flex flex-col justify-center md:gap-4 gap-3">
-          <h3 class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
-          <p class="text-grayishBlue">
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
+          <h3 id="title" class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
+          <p id="paragraph" class="text-grayishBlue">
           </p>
           <button class="h-fit w-fit rounded-md bg-softBlue p-2 text-white">
           More Info
@@ -173,8 +176,8 @@ function mobileArticle() {
   const article = document.querySelector(".article");
   article.innerHTML = `
        <div class="flex flex-col justify-center md:gap-4 gap-3">
-          <h3 class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
-          <p class="text-grayishBlue">
+          <h3 id="title" class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
+          <p id="paragraph" class="text-grayishBlue">
             Organize your bookmarks however you like. Our simple drag-and-drop
             interface gives you complete control over how you manage your
             favourite sites.

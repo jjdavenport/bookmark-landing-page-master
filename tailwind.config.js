@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       padding: {
         customClampBtn: "clamp(0.5rem, -0.0714rem + 1.1905vw, 1rem);",
-        customClampNav: "clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);",
+        customClampBar: "clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);",
         customClamp: "clamp(0.5rem, -3.5rem + 8.3333vw, 4rem);",
       },
       gap: {

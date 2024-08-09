@@ -1225,7 +1225,7 @@ video {
     padding-right: 2rem;
   }
 
-  .md\:px-customClampNav{
+  .md\:px-customClampBar{
     padding-left: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
     padding-right: clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);;
   }
