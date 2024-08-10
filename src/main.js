@@ -69,25 +69,19 @@ function buttons() {
     if (input === "") {
       error.innerText = "Whoops, make sure it's not empty";
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
-      contactInput.classList.add(
-        "bg-[url('../src/assets/images/icon-error.svg')]",
-      );
+      contactInput.classList.add("bg-error");
       error.classList.add("p-1");
     } else if (!regex.test(input)) {
       error.innerText = "Whoops, make sure it's an email address";
       error.classList.add("p-1");
-      contactInput.classList.add(
-        "bg-[url('../src/assets/images/icon-error.svg')]",
-      );
+      contactInput.classList.add("bg-error");
       inputDiv.classList.add("outline", "outline-softRed", "bg-softRed");
     } else {
       error.innerText = "";
       contactInput.value = "";
       error.classList.remove("p-1");
       inputDiv.classList.remove("outline", "outline-softRed", "bg-softRed");
-      contactInput.classList.remove(
-        "bg-[url('../src/assets/images/icon-error.svg')]",
-      );
+      contactInput.classList.remove("bg-error");
     }
   });
   faq.forEach((faqElement) => {
@@ -126,7 +120,7 @@ function buttons() {
         button.classList.remove("border-b-4", "border-softRed", "text-black");
         button.classList.add("transition-border", "text-grayishBlue");
       });
-      btn.classList.add("border-b-4", "border-softRed", "text,black");
+      btn.classList.add("border-b-4", "border-softRed", "text-black");
       btn.classList.remove("text-grayishBlue");
       updateFeature(features[i]);
     });
@@ -156,39 +150,9 @@ function desktopMobileNav() {
   const windowSize = window.innerWidth;
   if (windowSize >= 768) {
     desktopNav();
-    desktopArticle();
   } else {
     mobileNav();
-    mobileArticle();
   }
-}
-
-function desktopArticle() {
-  const article = document.querySelector(".article");
-  article.innerHTML = `
-    <div class="flex flex-col justify-center md:gap-4 gap-3">
-          <h3 id="title" class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
-          <p id="paragraph" class="text-grayishBlue">
-          </p>
-          <button class="h-fit w-fit rounded-md bg-softBlue p-2 text-white">
-          More Info
-        </button>
-        </div>
-  `;
-}
-
-function mobileArticle() {
-  const article = document.querySelector(".article");
-  article.innerHTML = `
-       <div class="flex flex-col justify-center md:gap-4 gap-3">
-          <h3 id="title" class="text-2xl font-bold font-medium md:text-3xl">Bookmark in one click</h3>
-          <p id="paragraph" class="text-grayishBlue">
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
-          </p>
-        </div>
-  `;
 }
 
 function desktopNav() {

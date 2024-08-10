@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage: {
+        error: "url('../src/assets/images/icon-error.svg')",
+      },
       padding: {
         customClampBtn: "clamp(0.5rem, -0.0714rem + 1.1905vw, 1rem);",
         customClampBar: "clamp(0.5rem, -5.7857rem + 13.0952vw, 6rem);",
